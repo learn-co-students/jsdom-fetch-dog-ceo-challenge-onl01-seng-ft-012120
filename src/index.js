@@ -15,7 +15,7 @@ function loadImages() {
       });
 }
 
-// add image elements to the DOM for each image in the array
+// this will add image elements to the DOM for each image in the array
 function addImage(dogPicUrl) {
     let container = document.querySelector('#dog-image-container');
     let newImageEl = document.createElement('img');
@@ -23,7 +23,7 @@ function addImage(dogPicUrl) {
     container.appendChild(newImageEl);
 }
 
-// load all breed options
+// this will load all breed options
 function loadBreedOptions() {
     const breedUrl = 'https://dog.ceo/api/breeds/list/all'
     fetch(breedUrl)
@@ -51,7 +51,7 @@ function removeChildren(element) {
     }
 }
 
-// filter by letter
+// this will filter by letter
 function selectBreedsStartingWith(letter) {
     updateBreedList(breeds.filter(breed => breed.startsWith(letter)));
 }
@@ -64,7 +64,7 @@ function addBreedSelectListener() {
     });
 }
 
-// color of dog breed changes to red upon a click
+// this will change the color of dog breed to red upon a click
 function addBreed(breed) {
     let ul = document.querySelector('#dog-breeds');
     let li = document.createElement('li');
