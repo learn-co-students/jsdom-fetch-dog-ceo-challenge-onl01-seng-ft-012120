@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function loadImages() {
     const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
     fetch(imgUrl)
-      .then(res=> res.json())
+      .then(res => res.json())
       .then(results => {
         results.message.forEach(image => addImage(image))
       });
@@ -51,7 +51,7 @@ function removeChildren(element) {
     }
 }
 
-// this will filter by letter
+// filter by letter
 function selectBreedsStartingWith(letter) {
     updateBreedList(breeds.filter(breed => breed.startsWith(letter)));
 }
